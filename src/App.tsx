@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import logo from './logo.png'
 import cameraImage from './camera-gimble2.png'
-import droneImage from './drone2.png'
 import setupImage from './setbuilding2.png'
 import photoImage from './photography2.png'
 import videoImage from './videography.png'
