@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from './logo.png'
 import cameraImage from './camera-gimble2.png'
 import droneImage from './drone2.png'
-import setupImage from './set_2.png'
-import photoImage from './camera_1.png'
+import setupImage from './setbuilding2.png'
+import photoImage from './photography2.png'
+import videoImage from './videography.png'
 
 const phoneNumbers = ['9960832761', '9373423380', '9860066964']
 
 export const App: React.FC = () => {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  const [videoFailed, setVideoFailed] = useState(false)
+
   return (
     <div className="site">
       <header className="site-header">
@@ -26,7 +30,41 @@ export const App: React.FC = () => {
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button
+          type="button"
+          className="mobile-nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded={mobileNavOpen}
+          onClick={() => setMobileNavOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </header>
+
+      {mobileNavOpen && (
+        <nav className="mobile-nav">
+          <a href="#about" onClick={() => setMobileNavOpen(false)}>
+            About
+          </a>
+          <a href="#why" onClick={() => setMobileNavOpen(false)}>
+            Why CMYK
+          </a>
+          <a href="#services" onClick={() => setMobileNavOpen(false)}>
+            Services
+          </a>
+          <a href="#process" onClick={() => setMobileNavOpen(false)}>
+            Process
+          </a>
+          <a href="#work" onClick={() => setMobileNavOpen(false)}>
+            Work
+          </a>
+          <a href="#contact" onClick={() => setMobileNavOpen(false)}>
+            Contact
+          </a>
+        </nav>
+      )}
 
       <main>
         <section className="hero">
@@ -49,7 +87,29 @@ export const App: React.FC = () => {
               </a>
             </div>
           </div>
-          <img src={cameraImage} className='hero-camera-image' alt="Professional camera on gimbal" style={{}}/>
+          <div className="video-content">
+            <div className="video-frame">
+              {videoFailed ? (
+                <img
+                  src="/poster.png"
+                  alt="CMYK Media showreel poster"
+                  className="hero-video"
+                />
+              ) : (
+                <video
+                  className="hero-video"
+                  src="/sample_video.mp4"
+                  controls
+                  preload="metadata"
+                  poster="/poster.png"
+                  onError={() => setVideoFailed(true)}
+                >
+                  Sorry, your browser doesn&apos;t support embedded videos.
+                </video>
+              )}
+            </div>
+          </div>
+          {/* <img src={cameraImage} className='hero-camera-image' alt="Professional camera on gimbal" style={{}}/> */}
           {/* <div className="hero-card">
 
            
@@ -83,11 +143,12 @@ export const App: React.FC = () => {
               </p>
             </div>
             <div className="section-header-image">
-              <img
+             {/*  <img
                 src={droneImage}
                 className="hero-drone-image"
                 alt="Professional camera on gimbal"
-              />
+                /> */}
+                <img src={cameraImage} className='hero-camera-image' alt="Professional camera on gimbal" style={{}}/>
             </div>
           </div>
         {/*   <div className="focus-grid">
@@ -185,7 +246,7 @@ export const App: React.FC = () => {
 
           <div className="service-card-grid">
             <article className="service-card service-card-video">
-              <div className="service-image">Videography</div>
+            <img src={videoImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
               <h3>Videography</h3>
               <p>
                 Corporate and wedding films, event coverage, and promotional videos crafted to
@@ -194,7 +255,7 @@ export const App: React.FC = () => {
             </article>
 
             <article className="service-card service-card-photo" style={{display: 'flex', flexDirection: 'column', overflow: 'visible', alignItems: 'center', justifyContent: 'center'}}>
-            <img src={photoImage} className='hero-camera2-image' alt="Professional camera on gimbal" style={{}}/>
+            <img src={photoImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
               <h3>Photography</h3>
               <p>
                 Corporate, event and wedding photography that captures every detail and emotion
