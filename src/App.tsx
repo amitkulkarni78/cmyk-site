@@ -4,7 +4,9 @@ import cameraImage from './camera-gimble2.png'
 import setupImage from './setbuilding2.png'
 import photoImage from './photography2.png'
 import videoImage from './videography.png'
-
+import brandingImage from './ACMA5.jpeg'
+import creativeDesignImage from './creativedesign2.png'
+import printingImage from './ACMA9.jpeg'
 const phoneNumbers = ['9960832761', '9373423380', '9860066964']
 
 export const App: React.FC = () => {
@@ -170,9 +172,15 @@ export const App: React.FC = () => {
           <div className="section-intro">
             <h2>Introduction</h2>
             <p>
-              CMYK Media is your premier partner for professional media services. We specialize
-              in all types of events, shoots, and brand promotion with strategic media planning
-              and expert suggestions.
+            CMYK Media is your premier partner for professional media services. We specialize in all type of Events, Shoots and Brand
+Promotion with Media Planning & Suggestions. Our goal is to
+deliver exceptional content that creates your Identity. We are
+a one stop marketing solution for positioning your brand in the
+market, key to successful business is to get more and more
+people know about your products and services that, we do in
+the result driven manner in association with the experts in our
+team. We manage your company image in a cohesive way to
+help achieve your marketing goals.
             </p>
             <p>
               Our goal is to deliver exceptional content that creates and strengthens your brand
@@ -185,53 +193,91 @@ export const App: React.FC = () => {
             <div className="info-card mission">
               <h3>Our Mission</h3>
               <p>
-                To provide affordable solutions with clear targets and segmented risk, ensuring
-                that every project delivers measurable results.
+              “To deliver affordable and result-driven media
+solutions that help brands grow and connect with
+their audience.”
+To provide affordable, reliable, and result-driven
+media solutions that help businesses achieve their
+communication goals and strengthen their brand
+presence.
+We focus on clear objectives, strategic planning,
+and efficient execution to deliver measurable
+value to our clients.
               </p>
             </div>
             <div className="info-card vision">
               <h3>Our Vision</h3>
-              <p>To be as clear and sharp as a mirrorless lens in everything we deliver.</p>
+              <p>“To be a creative and trusted media partner,
+capturing ideas with clarity and delivering
+impactful visual experiences.”
+To become a trusted creative media partner,
+known for clarity, innovation, and excellence in
+visual storytelling — delivering results as sharp
+and precise as a mirrorless lens.
+</p>
             </div>
           </div>
         </section>
 
         <section id="why" className="section">
           <div className="section-header">
-            <h2>Why Choose CMYK Media?</h2>
+            <h2>Our Facilities</h2>
             <p>We are dedicated to exceeding your expectations at every stage of the journey.</p>
           </div>
 
           <div className="card-grid">
             <article className="card accent-cyan">
-              <h3>Professional Team</h3>
+              <h3>In-House Fabrication Unit</h3>
               <p>
-                Experienced supervision and technical support with updated equipment operators,
-                committed to high-quality output every time.
+              Equipped with advanced laser cutting, router
+machines, and fabrication tools to build
+customized event setups, exhibition stalls, and
+branding structures.
               </p>
             </article>
 
             <article className="card accent-magenta">
-              <h3>Customization</h3>
+              <h3>Professional Media Equipment</h3>
               <p>
-                Tailored solutions designed to fit your specific project requirements, brand
-                language, and creative vision.
+              Access to high-end cameras, stabilizers,
+lighting setups, drones, and audio systems to
+ensure cinematic quality production.
+
               </p>
             </article>
 
             <article className="card accent-yellow">
-              <h3>Reliability</h3>
+              <h3>Editing & Post-Production Studio</h3>
               <p>
-                On-time delivery and exceptional customer service for a smooth, stress-free
-                experience from start to finish.
+              Dedicated editing workstations and
+professional software for video editing, motion
+graphics, and color grading.
               </p>
             </article>
-
-            <article className="card accent-black">
-              <h3>State-of-the-Art Setup</h3>
+          </div>
+          <div className="card-grid">
+          <article className="card accent-yellow">
+              <h3> Design & Creative Department </h3>
               <p>
-                In-house fabrication, designers, editors, laser and router facilities to execute
-                even the finest production jobs with precision.
+              A skilled team of graphic designers, motion
+artists, and content creators delivering
+creative branding and visual storytelling.
+              </p>
+            </article>
+            <article className="card accent-cyan">
+              <h3> Printing & Branding Solutions </h3>
+              <p>
+              Complete printing and branding support
+including banners, flex, standees, backdrops,
+and promotional materials.
+              </p>
+            </article>
+            <article className="card accent-magenta">
+              <h3> Technical Support Team</h3>
+              <p>
+              Experienced technicians and operators
+ensuring smooth execution of events, shoots,
+and installations.
               </p>
             </article>
           </div>
@@ -239,37 +285,112 @@ export const App: React.FC = () => {
 
         <section id="services" className="section section-alt">
           <div className="section-header">
-            <h2>What We Do</h2>
-            <p>End-to-end media services for brands, corporates, and celebrations.</p>
+            <h2>Our Services</h2>
+            <p>We provide end-to-end creative, production,
+and marketing solutions to help brands build
+strong visibility and impactful experiences.</p>
           </div>
 
           <div className="service-card-grid">
             <article className="service-card service-card-video">
             <img src={videoImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
-              <h3>Videography</h3>
+              <h3>Media Production</h3>
               <p>
-                Corporate and wedding films, event coverage, and promotional videos crafted to
-                move your audience.
-              </p>
+              High-quality visual storytelling through
+professional photography, videography, and
+cinematic film production.</p>
+<ul>
+  <li>Photography</li>
+  <li>Videography / Film Production</li>
+  <li>Drone Shoots</li>
+</ul>              
             </article>
 
-            <article className="service-card service-card-photo" style={{display: 'flex', flexDirection: 'column', overflow: 'visible', alignItems: 'center', justifyContent: 'center'}}>
+            <article className="service-card service-card-photo" >
             <img src={photoImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
-              <h3>Photography</h3>
-              <p>
-                Corporate, event and wedding photography that captures every detail and emotion
-                with clarity.
+              <h3>Event Production</h3>
+              <p>Planning and executing professional events,
+brand activations, exhibitions, and stage
+productions with complete technical and
+creative support.
               </p>
+              <ul>
+  <li>Corporate Events</li>
+  <li>Exhibitions & Exhibitions</li>
+  <li>Stage Productions</li>
+  <li>Brand Activations</li>
+</ul>
             </article>
 
-            <article className="service-card service-card-setup" style={{display: 'flex', flexDirection: 'column', overflow: 'visible', alignItems: 'center', justifyContent: 'center'}}>
+            <article className="service-card service-card-setup" >
+              <img src={creativeDesignImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+
+              <h3>Creative Design </h3>
+              <p>
+              Designing visually compelling graphics and
+    motion content that strengthens brand
+    identity and communication.
+    </p>
+    <ul>
+  <li>Graphic Design</li>
+  <li>Motion Graphics</li>
+  <li>Content Creation</li>
+</ul>
+
+            </article>
+
+            
+          </div>
+          <div className="service-card-grid">
+          <article className="service-card service-card-setup" >
+              <img src={brandingImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+
+              <h3> Marketing & Promotion </h3>
+              <p>
+              Strategic advertising and social media
+marketing to enhance brand reach and
+engagement.</p>
+<ul>
+  <li>Advertising & Media</li>
+  <li>Social Media Marketing</li>
+</ul>
+          
+
+            </article>
+            
+            <article className="service-card service-card-setup" >
               <img src={setupImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
 
-              <h3>Design &amp; Setup</h3>
+              <h3> Fabrication & Project Management </h3>
               <p>
-                Stall design, event setups and branding collaterals that bring your visual
-                identity to life.
-              </p>
+              End-to-end support for custom fabrication, technical installations, and project
+coordination for events and brand setups.
+</p>
+<ul>
+  <li>Exhibition booth fabrication</li>
+  <li>Event stage structure</li>
+  <li>Industrial fabrication workshop</li>
+</ul>
+
+            </article>
+
+            <article className="service-card service-card-setup" >
+              <img src={printingImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+
+              <h3>  Printing & Branding </h3>
+              <p>
+              Complete printing and branding support
+including banners, flex, standees, backdrops,
+and promotional materials.</p>
+<ul>
+  <li>Banners</li>
+  <li>Flex</li>
+  <li>Standees</li>
+  <li>Backdrops</li>
+  <li>Promotional Materials</li>
+</ul>
+
+
             </article>
           </div>
         </section>

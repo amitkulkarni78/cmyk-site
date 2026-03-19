@@ -352,6 +352,7 @@ a:hover {
 .hero-setup-image {
     width: fit-content;
     max-width: 100%;
+    max-height: 300px;
     position: relative;
 }
 
@@ -628,6 +629,7 @@ a:hover {
 
 .service-card-grid {
     display: grid;
+    margin-bottom: 10px;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 18px;
 }
