@@ -6,15 +6,24 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
+    "audit": "npm audit --audit-level=moderate"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "typescript": "~5.9.3",
+    "typescript-eslint": "^8.59.0",
     "vite": "^7.3.1"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   }

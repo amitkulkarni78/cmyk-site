@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import logo from './logo.png'
 import cameraImage from './camera-gimble2.png'
 import setupImage from './setbuilding2.png'
@@ -15,6 +16,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="site">
+      <Analytics />
       <header className="site-header">
         <div className="logo-lockup">
           <img src={logo} alt="CMYK Media" className="logo-image" />
@@ -95,6 +97,10 @@ export const App: React.FC = () => {
                   src="/poster.png"
                   alt="CMYK Media showreel poster"
                   className="hero-video"
+                  loading="eager"
+                  decoding="async"
+                  width={1280}
+                  height={720}
                 />
               ) : (
                 <video
@@ -105,6 +111,13 @@ export const App: React.FC = () => {
                   poster="/poster.png"
                   onError={() => setVideoFailed(true)}
                 >
+                  <track
+                    kind="captions"
+                    src="/captions.vtt"
+                    srcLang="en"
+                    label="English captions"
+                    default
+                  />
                   Sorry, your browser doesn&apos;t support embedded videos.
                 </video>
               )}
@@ -149,7 +162,15 @@ export const App: React.FC = () => {
                 className="hero-drone-image"
                 alt="Professional camera on gimbal"
                 /> */}
-                <img src={cameraImage} className='hero-camera-image' alt="Professional camera on gimbal" style={{}}/>
+                <img
+                  src={cameraImage}
+                  className="hero-camera-image"
+                  alt="Professional camera on gimbal"
+                  loading="lazy"
+                  decoding="async"
+                  width={900}
+                  height={600}
+                />
             </div>
           </div>
         {/*   <div className="focus-grid">
@@ -293,7 +314,15 @@ strong visibility and impactful experiences.</p>
 
           <div className="service-card-grid">
             <article className="service-card service-card-video">
-            <img src={videoImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+              <img
+                src={videoImage}
+                className="hero-setup-image"
+                alt="Professional camera on gimbal"
+                loading="lazy"
+                decoding="async"
+                width={720}
+                height={480}
+              />
               <h3>Media Production</h3>
               <p>
               High-quality visual storytelling through
@@ -307,7 +336,15 @@ cinematic film production.</p>
             </article>
 
             <article className="service-card service-card-photo" >
-            <img src={photoImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+              <img
+                src={photoImage}
+                className="hero-setup-image"
+                alt="Professional camera on gimbal"
+                loading="lazy"
+                decoding="async"
+                width={720}
+                height={480}
+              />
               <h3>Event Production</h3>
               <p>Planning and executing professional events,
 brand activations, exhibitions, and stage
@@ -323,7 +360,15 @@ creative support.
             </article>
 
             <article className="service-card service-card-setup" >
-              <img src={creativeDesignImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+              <img
+                src={creativeDesignImage}
+                className="hero-setup-image"
+                alt="Professional camera on gimbal"
+                loading="lazy"
+                decoding="async"
+                width={720}
+                height={480}
+              />
 
               <h3>Creative Design </h3>
               <p>
@@ -343,7 +388,15 @@ creative support.
           </div>
           <div className="service-card-grid">
           <article className="service-card service-card-setup" >
-              <img src={brandingImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+              <img
+                src={brandingImage}
+                className="hero-setup-image"
+                alt="Professional camera on gimbal"
+                loading="lazy"
+                decoding="async"
+                width={720}
+                height={480}
+              />
 
               <h3> Marketing & Promotion </h3>
               <p>
@@ -359,7 +412,15 @@ engagement.</p>
             </article>
             
             <article className="service-card service-card-setup" >
-              <img src={setupImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+              <img
+                src={setupImage}
+                className="hero-setup-image"
+                alt="Professional camera on gimbal"
+                loading="lazy"
+                decoding="async"
+                width={720}
+                height={480}
+              />
 
               <h3> Fabrication & Project Management </h3>
               <p>
@@ -375,7 +436,15 @@ coordination for events and brand setups.
             </article>
 
             <article className="service-card service-card-setup" >
-              <img src={printingImage} className='hero-setup-image' alt="Professional camera on gimbal" style={{}}/>
+              <img
+                src={printingImage}
+                className="hero-setup-image"
+                alt="Professional camera on gimbal"
+                loading="lazy"
+                decoding="async"
+                width={720}
+                height={480}
+              />
 
               <h3>  Printing & Branding </h3>
               <p>
@@ -467,7 +536,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/1y4YlFMW9zqlwwCW_KzBkudwDI60qTycI?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Branding Activity & FOC</h3>
@@ -478,7 +547,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/1tVLK3wdoOMpwomSMBN7ehtzzxyP-AKXD?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Event Videos</h3>
@@ -489,7 +558,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/1pYQHYdPBxo7dxkRunwxF7wbzKo4i6fm4?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Marriage & Décor</h3>
@@ -500,7 +569,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/1geI4I-t3Jlsa-LNQz5kQvi0Nr54KSLV-?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Setup Pictures</h3>
@@ -511,7 +580,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/file/d/1dihw2wRCHBUdGrwvy8d2_IhKpaevyh1e/view?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Stall Designing</h3>
@@ -522,7 +591,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/179rX1YLIsZJ2K9Yd6ZY0UdxZD1tVM-MJ"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Corporate Cinematography</h3>
@@ -533,7 +602,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/1fYamxrY7d9edi-rZLWOg_2s8L7wVIJf"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Corporate Photography</h3>
@@ -544,7 +613,7 @@ and promotional materials.</p>
               className="link-card"
               href="https://drive.google.com/drive/folders/1wdiCYs3wqw0I_VQBHY5BD2O4WDzamSlW"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className="link-card-thumb">Preview</div>
               <h3>Wedding Cinematography</h3>
