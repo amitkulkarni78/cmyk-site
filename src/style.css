@@ -1031,9 +1031,17 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: none;
+        gap: 14px;
+    }
     .hero-camera-image {
         transform: scaleX(-1.0) scaleY(1.0);
         width: 300px;
+    }
+    .hero-actions {
+        justify-content: center;
     }
     .site-header {
         padding-inline: 14px;
@@ -1075,9 +1083,27 @@ a:hover {
     .section-split {
         grid-template-columns: minmax(0, 1fr);
     }
+    .section-header {
+        text-align: center;
+    }
+    .section-header p {
+        text-align: center;
+    }
     .focus-inner {
         flex-direction: column-reverse;
-        align-items: flex-start;
+        align-items: flex-center;
+    }
+    .section-intro {
+        text-align: center;
+    }
+    .section-intro p {
+        text-align: center;
+    }
+    .section-grid {
+        text-align: center;
+    }
+    .section-grid p {
+        text-align: center;
     }
     .process-item {
         animation: none;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import logo from './logo.png'
-import cameraImage from './camera-gimble2.png'
+import cameraImage from './camera-gimble2.webp'
 import setupImage from './setbuilding2.png'
 import photoImage from './photography2.png'
 import videoImage from './videography.png'
@@ -107,7 +107,7 @@ export const App: React.FC = () => {
                   className="hero-video"
                   src="/sample_video.mp4"
                   controls
-                  preload="metadata"
+                  preload="auto"
                   poster="/poster.png"
                   onError={() => setVideoFailed(true)}
                 >
@@ -163,13 +163,12 @@ export const App: React.FC = () => {
                 alt="Professional camera on gimbal"
                 /> */}
                 <img
+                  fetchPriority="high"
                   src={cameraImage}
                   className="hero-camera-image"
                   alt="Professional camera on gimbal"
                   loading="lazy"
                   decoding="async"
-                  width={900}
-                  height={600}
                 />
             </div>
           </div>
